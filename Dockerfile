@@ -1,5 +1,5 @@
 FROM oven/bun:latest
-WORKDIR /app
+WORKDIR /
 COPY . .
 EXPOSE 8000
 ENTRYPOINT ["bun", "run", "index.js"]
