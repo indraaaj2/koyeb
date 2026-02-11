@@ -1,7 +1,5 @@
-FROM node:20-slim
+FROM oven/bun:latest
 WORKDIR /app
-COPY package*.json ./
-RUN npm install --only=production
 COPY . .
-EXPOSE 8080
-CMD ["npm", "start"]
+EXPOSE 8000
+ENTRYPOINT ["bun", "run", "index.ts"]
